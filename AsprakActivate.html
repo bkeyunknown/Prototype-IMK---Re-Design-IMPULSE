@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Activate Practicum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <style>
+        body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+        width: 400px;
+        height: 70px;
+        background-color: #8faadc;
+        float: left;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 20px;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 40px;
+            padding-right: 90px;
+            font-size: 35px;
+            float: right;
+            background-color: #8faadc;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        #btnadmin{
+            float:right;
+            margin: 15px 20px 0 0;
+        }
+        .in{
+            display: inline-block;
+        }
+        .menu{
+            height: 50px;
+            background-color: #FFFFFF;
+        }
+        .col-2{
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+            padding-top: px;
+            font-size: 30px;
+        }
+        .col-2 a{
+            text-decoration: none;
+            color: black;
+        }
+        #btnn{
+            border: none;
+            border-radius: 5px;
+        }
+        .container{
+           
+           width: 700px;
+           height: 300px;
+           background: #9DC3E6;
+           position: fixed;
+           top: 50%;
+           left: 50%;
+           margin-top: -150px;
+           margin-left: -240px;
+           padding: 10px;
+           border-radius: 10px;
+       }
+       .isi1{
+           display: inline-block;
+       }
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="AsprakHome.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1" class="in">
+                    <strong>Waktu Server : 10:48:11</strong>
+                </div>
+                <div id="header2" class="in">
+                    <p style="color: white;float: right;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <strong><a href="Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+        <div class="menu">
+            <div class="row">
+                <div class="col-2">
+                    <a href="AsprakHome.html">Home</a>
+                </div>
+                <div class="col-2" style="">
+                    <a href="ApsrakAbsen.html">Presence</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;background: #6688FF;border: 4px solid #0038FF;">
+                    <a href="AsprakActivate.html">Activate Practicum</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="TaskManagerViewPre.html">Task Manager</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="AsprakScore.html">Score Manager</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="AsprakAccount.html">Account Manager</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="container">
+                <form action="" style="margin-left: 60px;">
+                        Room
+                        <select class="isi1" id="isi1" style="margin-left: 70px; width: 210px;font-size:24px">
+                            <option value="">--Choose Room--</option>
+                            <option value="lab1">IFLAB 1</option>
+                            <option value="lab2">IFLAB 2</option>
+                            <option value="lab3">IFLAB 4</option>
+                            <option value="lab4">IFLAB 5</option>
+                        </select>
+                        <span class="isi1" style="color: red" id="alert1"><strong> Room is required!</strong></span>
+                        <br>
+                        Module
+                        <select id="isi2" style="margin-left: 58px; margin-top: 20px; width: 210px;font-size:24px">
+                            <option value="">--Choose Module--</option>
+                            <option value="mod1">Module 1</option>
+                            <option value="mod2">Module 2</option>
+                        </select>
+                        <span style="color: red;" id="alert2"><strong> Module is required!</strong></span><br>
+                        Auth
+                        <input type="text" name="" id="isi3" style="margin-left: 78px; margin-top: 20px; width: 210px;font-size:24px">
+                        <span style="color: red;" id="alert3"><strong> Auth is required!</strong></span><br>
+                        <button onclick="halo1()" id="btnn" style="margin-left: 10px; margin-top: 20px;font-size: 50px;width: 300px;" type="button" class="btn-primary">Activate</button>
+                        
+                </form>
+            </div>
+
+            <script>
+            var alert1;
+            var alertt2;
+            var alerttt3;
+            var isi1;
+            var isi2;
+            var isi3;
+            alert1 = document.getElementById('alert1');
+            alertt2 = document.getElementById('alert2');
+            alerttt3 = document.getElementById('alert3');
+            alert1.style.visibility = "hidden";
+            alertt2.style.visibility = "hidden";
+            alert3.style.visibility = "hidden";
+            
+            function halo1(){
+                
+                //alert(document.getElementById("isi3").value);
+                //if ((document.getElementById("isi1").value == '')&&(document.getElementById("isi2").value == '')&&(document.getElementById("isi3").value == '')){
+                if (document.getElementById("isi1").value == ''){
+                    alert1.style.visibility = "visible";
+                }
+                if (document.getElementById("isi2").value == ''){
+                    alertt2.style.visibility = "visible";
+                }
+                if (document.getElementById("isi3").value == ''){
+                    alerttt3.style.visibility = "visible";
+                }
+                if (document.getElementById('isi1').value != '' && document.getElementById('isi2').value != '' && document.getElementById('isi3').value != ''){
+                    swal("", "Practicume Activated", "success");
+                }
+            }
+            function halo2(){
+                    
+    
+                }
+            
+            </script>
+        
+</body>
+</html>

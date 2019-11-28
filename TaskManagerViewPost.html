@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Task Manager - View</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <style>
+        body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+            
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+        width: 400px;
+        height: 70px;
+        background-color: #8FAADC;
+        float: left;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 20px;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 40px;
+            padding-right: 90px;
+            font-size: 35px;
+            float: right;
+            background-color: #8FAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        #btnadmin{
+            float:right;
+            margin: 15px 20px 0 0;
+        }
+        .in{
+            display: inline-block;
+        }
+        .menu{
+            height: 50px;
+            background-color: #FFFFFF;
+        }
+        .col-2{
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+            padding-top: px;
+            font-size: 30px;
+        }
+        .col-2 a{
+            text-decoration: none;
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <!--
+        <div className="youtube-wrapper">
+                <div className="img-thumb">
+                    <img src="https://i.ytimg.com/vi/5kHyviqjhCk/hqdefault.jpg?sqp=-oaymwEYCKgBEF5IVfKriqkDCwgBFQAAiEIYAXAB&rs=AOn4CLDD6DPWG5t9r4EdBQj0U5-vnDoyaQ" alt=""/>
+                    <p className="time">{props.time}</p>
+                </div>
+                <p className="title">{props.title}</p>
+                <p className="desc">{props.desc}</p>
+        </div>
+    -->
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="AsprakHome.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1" class="in">
+                    <strong>Waktu Server : 10:48:11</strong>
+                </div>
+                <div id="header2" class="in">
+                    <p style="color: white;float:right;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <strong><a href="Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+        <div class="menu">
+                <div class="row">
+                        <div class="col-2">
+                            <a href="AsprakHome.html">Home</a>
+                        </div>
+                        <div class="col-2" style="">
+                            <a href="ApsrakAbsen.html">Presence</a>
+                        </div>
+                        <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                            <a href="AsprakActivate.html">Activate Practicum</a>
+                        </div>
+                        <div class="col-2" style="font-size: 26px;padding-top: 2px;background: #6688FF;border: 4px solid #0038FF;">
+                            <a href="TaskManagerViewPre.html">Task Manager</a>
+                        </div>
+                        <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                            <a href="AsprakScore.html">Score Manager</a>
+                        </div>
+                        <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                            <a href="AsprakAccount.html">Account Manager</a>
+                        </div>
+                    </div>
+        </div>
+        <div>
+    <a href ="TaskManagerViewPre.html"><div style ="position: absolute;
+
+background: #6688FF;
+border: 3px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+position: absolute;
+width: 250px;
+height: 50px;
+left: 33px;
+top: 149px;
+
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 48px;
+text-align: center;
+
+color: #000000;" >View Task</div></a>
+<a href ="TaskManagerInput.html"><div style="position: absolute;
+width: 250px;
+height: 50px;
+left: 302px;
+top: 149px;
+
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 48px;
+text-align: center;
+
+
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+color: #000000;">
+Input Task</div></a>
+<a href="TaskManagerViewPre.html"><div style ="position: absolute;
+width: 250px;
+height: 50px;
+left: 33px;
+top: 211px;
+
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 48px;
+text-align: center;
+
+color: #000000;">
+Pre Test</div></a>
+<a href ="TaskManagerViewJournal.html"><div style ="position: absolute;
+width: 250px;
+height: 50px;
+left: 283px;
+top: 211px;
+
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 48px;
+text-align: center;
+
+
+background: #FFFFFF;
+border: 1px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+color: #000000;">
+
+Journal</div></a>
+
+<a href="TaskManagerViewPost.html"><div style ="position: absolute;
+width: 250px;
+height: 50px;
+left: 533px;
+top: 211px;
+
+color:black;
+background: #6688FF;
+border: 3px solid #000000;
+box-sizing: border-box;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 34px;
+line-height: 48px;
+text-align:center;">
+Post Test
+</div></a>
+
+<!--  KONTEN TABEL PRETEST
+<table width = "100%" border="0" cellspacing = "3" cellpading="0" style = >
+        <tbody>
+            <tr>
+                <td width = "2%" rowspan = "5" align = "left" valign="top">
+                    <b>1. </b>
+                </td>
+                <td> 
+            </tr>
+        </tbody>
+970.21
+93.83
+</table>
+!-->
+<div style ="position: absolute;
+    font-family: calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 34px;
+            line-height: 48px;
+
+    width: 166px;
+    height: 48px;
+    left: 198px;
+    top: 332px;"
+    >
+    Post Test
+</div>
+<div id ="soalPertama" style="display:block;">
+    <textarea style="position:absolute;
+        left: 198px;
+        top: 393px;
+        font-size:20px" rows="3" cols="90">1. ini hanyalah seekor soal pertama
+    </textarea>
+
+    <button  style ="position: absolute;
+        width: 100px;
+        height: 50px;
+        left: 1100px;
+        top: 390px;
+        background-color:#fff200;
+        
+        border: 1px solid #333;
+        box-sizing: border-box;
+        
+        border-radius: 5px;
+        text-align:center">
+    Edit
+    
+    <button onclick="deletesoal1()" class="btn-danger" style="position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 1100px;
+    top: 450px;
+
+    border: 1px solid #333;
+    box-sizing: border-box;
+    border-radius: 5px;">
+    Delete
+    </button>
+</div>
+<div id ="soalKedua" style="display:block;">
+    <textarea id="textKedua" style="position:absolute;
+        left: 198px;
+        top: 593px;
+        font-size:20px" rows="3" cols="90"  >2. ini hanyalah seekor soal kedua
+    </textarea>
+
+    <button id="editKedua" onclick="editsoal2()"  style ="position: absolute;
+        width: 100px;
+        height: 50px;
+        left: 1100px;
+        top: 590px;
+        background-color:#fff200;
+
+        border: 1px solid #333;
+        box-sizing: border-box;
+        border-radius: 5px;
+        text-align:center">
+    Edit
+    </button>
+    <button id="deleteKedua" class = "btn-danger" onclick="deletesoal2()" style="position: absolute;
+    width: 100px;
+    height: 50px;
+    left: 1100px;
+    top: 650px;
+
+    
+    border: 1px solid #333;
+    box-sizing: border-box;
+    
+    border-radius: 5px;">
+    Delete
+    </div>
+    <a href="#" onclick="halo2()"><div style = "position: absolute;
+width: 285px;
+height: 34px;
+left: 815px;
+top: 227px;
+
+font-family: calibri;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 34px;
+text-align: center;
+text-decoration-line: underline;
+
+color: #0047FF;">
+Download Post Test
+</div></a>
+ 
+</div>
+        
+<select id="isi2" style="position:absolute;top:270px;left:200px; margin-top: 20px; width: 210px;font-size:24px">
+        <option value="">--Choose Module--</option>
+        <option value="mod1">Module 1</option>
+        <option value="mod2">Module 2</option>
+    </select>
+    
+<script>
+    function deletesoal2(){
+        var x = document.getElementById('soalKedua');
+        var y = confirm("apakah anda yakin ingin menghapus?");
+        if(y){
+            x.style.display ="none";
+        }else{
+            x.style.display ="block";
+        }
+    }
+    function deletesoal1(){
+        var x = document.getElementById('soalPertama');
+        var y = confirm("apakah anda yakin ingin menghapus?");
+        var z = document.getElementById('soalKedua');
+        if(y){
+            if(z.style.display=="block"){
+                x.style.display="none";
+                document.getElementById('deleteKedua').style.top = "450px";
+                document.getElementById('editKedua').style.top = "390px";
+                document.getElementById('textKedua').style.top = "393px";
+                
+            }else{
+                x.style.display ="none";
+            }
+            
+        }else{
+            x.style.display ="block";
+        }
+        
+    }
+    function halo2(){
+        swal("", "Post Test Downloaded", "success");
+    }
+    
+</script>
+</body>
+
+
+</html>

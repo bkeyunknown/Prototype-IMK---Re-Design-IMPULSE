@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Mulai Praktikum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+         body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+            width: 400px;
+            height: 70px;
+            background-color: #9DC3E6;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 20px;
+            background-color: #8CAADC;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 70px;
+            font-size: 35px;
+            float: right;
+            background-color: #8CAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        .in{
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        #sel1{
+            position: absolute;
+            width: 600px;
+            height: 180px;
+            left: 100px;
+            top: 130px;
+            z-index: -1;
+
+            background: #4472C4;
+            border: 3px solid #FFFFFF;
+            box-sizing: border-box;
+            border-radius: 20px;
+            color:#FFFFFF;
+            font-size:50px;
+        }
+
+        .pilih{
+            position: absolute;
+            width: 101px;
+            height: 84px;
+            left: 570px;
+            top: 210px;
+
+            width: 0px;
+            height: 0px;
+            border-left: 35px solid transparent;
+            border-right: 35px solid transparent;
+            border-top: 35px solid #ffffff;
+           
+        }
+
+        #auth{
+            position: absolute;
+            width: 600px;
+            height: 150px;
+            left: 100px;
+            top: 333px;
+
+            background: #FFFFFF;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 42px;
+            line-height: 60px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #0000000;
+
+            border:none;
+        }
+
+        #fotoasp{
+            position: absolute;
+            width: 420px;
+            height: 545px;
+            left: 950px;
+            top: 130px;
+        }
+
+        #fotogo{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 325px;
+            top: 550px;
+        }
+        .loading {
+            -webkit-animation: rotation 2s infinite linear;
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="Home_Praktikan.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1"></div>
+                <div id="header2" class="in">
+                    <p style="color: white;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <a href="ManageAccount.html"><img class="loading" style="width: 40px;" src="logo/setting.jpg" alt=""></a>
+                    <strong><a href="../Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+       
+
+        <div class="pilih"></div>
+        <div>
+            <div class="form-group">
+            <select class="form-control" id="sel1">
+                <option selected>- Choose Assistant -</option>
+                <option>Muhammad Rifki F</option>
+                <option>Irsyad Rafi D</option>
+                <option>Muhammad Danil M</option>
+                <option>Daffa Maulana H</option>
+            </select>
+            </div>
+        </div>
+        <div>
+            <input type="text" name="auth" id="auth"  placeholder="-Authentication-">
+        </div>
+        <div>
+            <img src="logo/fotoasprak.jpg" alt=""  id="fotoasp">
+        </div>
+        <div>
+            <a href="Mulai_Praktikan.html"><img src="logo/GO.png" alt=""  id="fotogo"></a>
+        </div>
+        
+       
+</body>
+</html>

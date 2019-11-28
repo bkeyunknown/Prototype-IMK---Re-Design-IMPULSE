@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Presence</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <style>
+        body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .container{
+            width: 380px;
+           border: 1px solid black;
+           height: 300px;
+           position: fixed;
+           top: 50%;
+           left: 50%;
+           margin-top: -90px;
+           margin-left: -190px;
+           padding: 10px;
+           border-radius: 10px;
+           padding-left: 25px;
+           padding-top: 50px;
+       }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+        width: 400px;
+        height: 70px;
+        background-color: #8faadc;
+        float: left;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 20px;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 40px;
+            padding-right: 90px;
+            font-size: 35px;
+            float: right;
+            background-color: #8faadc;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        #btnadmin{
+            float:right;
+            margin: 15px 20px 0 0;
+        }
+        .in{
+            display: inline-block;
+        }
+        .menu{
+            height: 50px;
+            background-color: #FFFFFF;
+        }
+        .col-2{
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+            padding-top: px;
+            font-size: 30px;
+        }
+        .col-2 a{
+            text-decoration: none;
+            color: black;
+        }
+        #btnn{
+            width: 200px;
+            font-size: 40px;
+            border: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="AsprakHome.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1" class="in">
+                    <strong>Waktu Server : 10:48:11</strong>
+                </div>
+                <div id="header2" class="in">
+                    <p style="color: white;float: right;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <strong><a href="Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+        <div class="menu">
+            <div class="row">
+                <div class="col-2">
+                    <a href="AsprakHome.html">Home</a>
+                </div>
+                <div class="col-2" style="background: #6688FF;border: 4px solid #0038FF;">
+                    <a href="ApsrakAbsen.html">Presence</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="AsprakActivate.html">Activate Practicum</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="TaskManagerViewPre.html">Task Manager</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="AsprakScore.html">Score Manager</a>
+                </div>
+                <div class="col-2" style="font-size: 26px;padding-top: 2px;">
+                    <a href="AsprakAccount.html">Account Manager</a>
+                </div>
+            </div>
+        </div>
+        <br>
+        
+        <div style="background-color: white;height: 550px;margin-left: 30px;margin-right: 30px;">
+            <div style="border: 1px solid lightgray; padding-left: 40px;padding-top: 10px; background: -webkit-linear-gradient(top, white 40%, lightgray 100%);">
+                <h4><strong>Presence</strong></h4>
+            </div>
+            <div class="container">
+                <form action="">
+                        Module 
+                        <select id="input" style="margin-left: 70px; width: 210px;font-size:24px">
+                            <option value="">--Choose Module--</option>
+                            <option value="mod1">Module 1</option>
+                            <option value="mod2">Module 2</option>
+                            <option value="mod3">Module 3</option>
+                            <option value="mod4">Module 4</option>
+                        </select><br>
+                        Class
+                        <select id="input1" style="margin-left: 90px; margin-top: 20px; width: 210px;font-size:24px">
+                            <option value="">--Choose Class--</option>
+                            <option value="mod1">IF-41-03</option>
+                            <option value="mod2">IF-41-02</option>
+                        </select><br>
+                        Type
+                        <select id="input2" style="margin-left: 92px; margin-top: 20px; width: 210px;font-size:24px">
+                            <option value="">-</option>
+                            <option value="mod1">Default</option>
+                            <option value="mod2">Substitute</option>
+                        </select><br>
+                        <button type="button" id="btnn" style="margin-left: 70px; margin-top: 20px;"class="btn-success" onclick="halo2()">Submit</button>
+                </form>
+            </div>
+        </div>
+        <script>
+                var username;
+                var pass;
+                var iin;
+                function halo2(){
+                    if (document.getElementById('input1').value != '' && document.getElementById('input').value != '' && document.getElementById('input2').value != ''){
+                        swal("", "Presence Submited", "success");
+                    }
+                    else{
+                        swal("", "Module, Class, Type Are Required", "warning");
+                    }
+    
+                }
+                
+                
+                
+                 
+            </script>
+        
+</body>
+</html>

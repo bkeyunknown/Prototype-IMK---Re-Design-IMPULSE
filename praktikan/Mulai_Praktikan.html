@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Soal Praktikum</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+         body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+            width: 400px;
+            height: 70px;
+            background-color: #9DC3E6;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 20px;
+            background-color: #8CAADC;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 70px;
+            font-size: 35px;
+            float: right;
+            background-color: #8CAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        .in{
+            display: inline-block;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        .Soal{
+            position: absolute;
+            width: 260px;
+            height: 65px;
+            left: 107px;
+            top: 130px;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 46px;
+            line-height: 65px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        .rar{
+            position: absolute;
+            width: 233px;
+            height: 65px;
+            left: 290px;
+            top: 130px;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 46px;
+            line-height: 65px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            text-decoration-line: underline;
+
+            color: #4472C4;
+
+        }
+        
+        .waktu{
+            position: absolute;
+            width: 414px;
+            height: 65px;
+            left: 1050px;
+            top: 130px;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 46px;
+            line-height: 65px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+        }
+
+    #inputsoal1{
+        position: absolute;
+        left: 107px;
+        top: 300px;
+    }
+
+    #inputsoal2{
+        position: absolute;
+        left: 107px;
+        top: 300px;
+        display:none;
+    }
+
+    #jawaban{
+        position: absolute;
+        border-top:none;
+        left: 107px;
+        top: 495px;
+    }
+
+    textarea{
+        border:none;
+        resize: none;
+    }
+
+    #ceklis img{
+        position: absolute;
+        width: 115px;
+        height: 115px;
+        left: 670px;
+        top: 580px;
+
+    }
+
+    #back {
+        position: absolute;
+        width: 234px;
+        height: 118px;
+        left: 107px;
+        top: 570px;
+
+    }
+
+    #next {
+        position: absolute;
+        width: 231px;
+        height: 122px;
+        left: 1150px;
+        top: 570px;
+    }
+
+    .loading {
+        -webkit-animation: rotation 2s infinite linear;
+    }
+
+    @-webkit-keyframes rotation {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+        to {
+            -webkit-transform: rotate(359deg);
+        }
+    }
+
+    </style>
+
+    <script>
+        function backnext(i) { 
+            if (i==0) {
+                document.getElementById("inputsoal1").style.display = "block";
+                document.getElementById("inputsoal2").style.display = "none";
+            } else {
+                document.getElementById("inputsoal1").style.display = "none";
+                document.getElementById("inputsoal2").style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="Home_Praktikan.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1"></div>
+                <div id="header2" class="in">
+                    <p style="color: white;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <a href="ManageAccount.html"><img class="loading" style="width: 40px;" src="logo/setting.jpg" alt=""></a>
+                    <strong><a href="../Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+        </div>
+
+        <div class="Soal">
+            File Soal:
+        </div>
+        <div class="rar">
+            Soal.rar
+        </div>
+        <div class="waktu">
+            Time: 09:59
+        </div>
+        
+        <div id="inputsoal1">
+            <textarea rows="8" cols="175" readonly>1. Tracing Program berikut ini.
+            package main
+            import "fmt"
+            func main(){ 
+                    hello := "Hello" 
+                    fmt.Print(hello, ", World")
+            }
+Jawaban:</textarea>
+
+        </div>
+        <div id="inputsoal2">
+            <textarea rows="8" cols="175" readonly>2. Tracing Program berikut ini.
+            package main
+            import "fmt"
+            func main(){ 
+                    multi := 10 * 10 
+                    fmt.Print("10 * 10 = ", multi)
+            }
+Jawaban:</textarea>
+        </div>
+
+        <div id="jawaban">
+            <textarea rows="2" cols="175">
+            </textarea>
+        </div>
+        <div id="back">
+            <img src="logo/back.png" alt="" onclick="backnext(0)">
+        </div>
+        <div id="ceklis">
+            <a href="Feedback.html"><img src="logo/ceklis.png" alt=""></a>
+        </div>
+        <div id="next">
+            <img src="logo/next.png" alt="" onclick="backnext(1)">
+        </div>
+</body>
+</html>

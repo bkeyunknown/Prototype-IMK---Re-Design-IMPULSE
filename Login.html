@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Login</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+
+    <style>
+        #header {
+            background-color: #2E75B6;
+            font-family: calibri;
+            height: 70px;
+        }
+        #footer{
+            height: 70px;
+            width: 100%;
+            position:absolute;
+            bottom:0px;
+            background-color: #2E75B6;
+        }
+        .container{
+           
+            width: 400px;
+            height: 300px;
+            background: #9DC3E6;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            margin-top: -150px;
+            margin-left: -205px;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid black;
+        }
+        #input{
+            outline: none;
+            text-align: center;
+            width: 250px;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            background-color: #9DC3E6;
+            border-radius: 2px;
+            border-bottom;: 1px solid black;
+        }
+        #input1{
+            outline: none;
+            text-align: center;
+            width: 250px;
+            border-right: none;
+            border-left: none;
+            border-top: none;
+            background-color: #9DC3E6;
+            border-radius: 2px;
+            border-bottom;: 1px solid black;
+        }
+        #btnLogin{
+            background-color: #2E75B6;
+            width: 100px;
+            height: 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 7px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    
+        <div  id="header">
+            
+        </div>
+        <div class="container">
+            <img style="float: left;" src="logo/logo_login2.png" alt=""><br><br>
+            <h1 style="color: white;">Login</h1>
+            <input id="input" type="text" required placeholder="NIM"><br><br>
+            <input id="input1" type="password" required placeholder="Password"><br><br>
+            <button type="submit" id="btnLogin" onclick="halo()">Login</button>
+        </div>
+
+        <div  id="footer">
+            
+        </div>
+        <script>
+            var username;
+            var pass;
+            function halo(){
+                username = document.getElementById('input').value;
+                pass = document.getElementById('input1').value;
+                if (username == '1301174103' && pass == 'asprak'){
+                    window.location = "LoginMilih.html"
+                }
+                else if (username == '1301174103' && pass == 'praktikan'){
+                    window.location = "praktikan/Home_Praktikan.html"
+                }
+                else if (username == '' && pass == ''){
+                    swal("", "Username and Password Are Required", "warning");
+                }
+                else{
+                    swal("", "Username or Password Incorect", "error");
+                }
+
+            }
+            
+            
+            
+             
+        </script>
+        
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Home</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <style>
+         body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+            width: 400px;
+            height: 70px;
+            background-color: #9DC3E6;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 20px;
+            background-color: #8CAADC;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 70px;
+            font-size: 35px;
+            float: right;
+            background-color: #8CAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        .in{
+            display: inline-block;            
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        #impulse {
+            position: absolute;
+            width: 757px;
+            height: 171px;
+            left: 65px;
+            top: 210px;
+
+            font-family: Wide Latin;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 90px;
+            line-height: 171px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #000000;
+        }
+
+        #mulai_praktikum {
+            position: absolute;
+            width:40px;
+            left: 1180px;
+            top: 250px;
+        }
+
+        #check_nilai{
+            position: absolute;
+            height:40px;
+            left: 500px;
+            top: 580px;
+        }
+
+        .segitiga1 {
+            transform: rotate(90deg);
+            width: 300px;
+            height: 150px;
+        }
+
+        .segitiga2 {
+            transform: rotate(180deg);
+            width: 300px;
+            height: 150px;
+        }
+
+        #checkScore {
+            position: absolute;
+            width: 331px;
+            height: 47px;
+            left: 560px;
+            top: 530px;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 33px;
+            line-height: 47px;
+            /* identical to box height */
+
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        #mulaiPraktikum{
+            position: absolute;
+            width: 331px;
+            height: 94px;
+            left: 1100px;
+            top: 280px;
+
+            font-family: Calibri;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 33px;
+            line-height: 47px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+
+            color: #FFFFFF;
+        }
+
+        .loading {
+            -webkit-animation: rotation 2s infinite linear;
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="Home_Praktikan.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1"></div>
+                <div id="header2" class="in">
+                    <p style="color: white;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <a href="ManageAccount.html"><img  class="loading" style="width: 40px;" src="logo/setting.jpg" alt="Manage Account"></a>
+                    <strong><a href="../Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+       
+
+
+        <div>
+            <h1 id="impulse" >IMPULSE</h1>
+        </div>
+
+
+        <div id="mulaiPraktikum">
+            Start <br> Praktikum
+        </div>
+        <div id="mulai_praktikum">
+            <a href="PilihPraktikum.html"><img class="segitiga1" src="logo/segitiga.png"></a>
+        </div>
+
+
+        <div id="checkScore">
+            Check Score
+        </div>
+        <div id="check_nilai">
+            <a href="Grafik.html"><img class="segitiga2" src="logo/segitiga.png"></a>
+        </div>
+</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Score Manager</title>
+	
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="shortcut icon" href="logo/logo_login2.png">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+	
+	<style>
+        body{
+            background-color: #9DC3E6;
+			font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+        width: 400px;
+        height: 70px;
+        background-color: #8faadc;
+        float: left;
+        margin: 0;
+        padding-top: 10px;
+        padding-left: 20px;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 40px;
+            padding-right: 90px;
+            font-size: 35px;
+            float: right;
+            background-color: #8faadc;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        #btnadmin{
+            float:right;
+            margin: 15px 20px 0 0;
+        }
+        .in{
+            display: inline-block;
+        }
+        .menu{
+            height: 50px;
+            background-color: #FFFFFF;
+        }
+        .col-2{
+            border: 1px solid black;
+            height: 50px;
+            text-align: center;
+            padding-top: px;
+            font-size: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+	</style>
+
+
+
+</head>
+<body>
+
+		<div  id="header">
+				<div class="grid">
+					<div id="logo" class="in">
+						<a href="AsprakHome.html">
+							<img src="logo/logo_admin.png" alt="">
+						</a>
+					</div>
+					<div id="header1" class="in">
+						<strong>Waktu Server : 10:48:11</strong>
+					</div>
+					<div id="header2" class="in">
+						<p style="color: white;float: right;">Welcome, Dicky Hidayat</p>
+					</div>
+					<div class="in" id="header3">
+						<strong><a href="Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+					</div>
+				</div>
+				
+			</div>
+			<div class="menu">
+				<div class="row">
+					<div class="col-2">
+						<a href="AsprakHome.html">Home</a>
+					</div>
+					<div class="col-2" style="">
+						<a href="ApsrakAbsen.html">Presence</a>
+					</div>
+					<div class="col-2" style="font-size: 26px;padding-top: 2px;">
+						<a href="AsprakActivate.html">Activate Practicum</a>
+					</div>
+					<div class="col-2" style="font-size: 26px;padding-top: 2px;">
+						<a href="TaskManagerViewPre.html">Task Manager</a>
+					</div>
+					<div class="col-2" style="font-size: 26px;padding-top: 2px;background: #6688FF;border: 4px solid #0038FF;">
+						<a href="AsprakScore.html">Score Manager</a>
+					</div>
+					<div class="col-2" style="font-size: 26px;padding-top: 2px;">
+						<a href="AsprakAccount.html">Account Manager</a>
+					</div>
+				</div>
+
+	<div class="limiter">
+		<div class="container-table10">
+			<select style="
+			font-size:24px;
+			position: absolute;
+			width: 210px;
+			left: 63px;
+			top: 275.25px;">
+				<option >--Choose Module--</option>
+				<option >Module 1</option>
+				<option >Module 2</option>
+				<option >Module 3</option>
+				<option >Module 4</option>
+				<option >Module 5</option>
+				<option >Module 6</option>
+				<option >Module 7</option>
+				<option >Module 8</option>
+				<option >Module 9</option>
+				<option >Module 10</option>
+			</select>
+			<select style="
+				font-size:24px;
+				padding-left: 15px;
+				position: absolute;
+				width: 210px;
+				height: 33.2px;
+				left: 329px;
+				top: 275.25px;">
+				<option >--Choose Class--</option>
+				<option >IF-42-01</option>
+				<option >IF-42-02</option>
+				<option >IF-42-03</option>
+				<option >IF-42-04</option>
+				<option >IF-42-05</option>
+				<option >IF-42-06</option>
+				<option >IF-42-07</option>
+				<option >IF-42-08</option>
+				<option >IF-42-09</option>
+				<option >IF-42-10</option>
+				<option >IF-42-11</option>
+				<option >IF-42-12</option>
+				<option >IF-42-GAB01</option>
+				<option >IF-42-INT</option>
+			</select>
+			<button style="
+			position: absolute;
+			width: 500px;
+			height: 80px;
+			left: 723px;
+			top: 242px;
+			font-family: calibri;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 36px;
+			line-height: 51px;
+			text-align: center;			
+			background: #0085FF;
+			border: 1px solid #0038FF;
+			box-sizing: border-box;
+			border-radius: 20px;">Download Answer</button>
+
+			<div class="wrap-table100">
+				<div class="table">
+
+					<div class="rows header">
+						<div class="cell">
+							Practician
+						</div>
+						<div class="cell">
+							Assistant Name
+						</div>
+						<div class="cell">
+							Pre Test
+						</div>
+						<div class="cell">
+							Journal
+						</div>
+						<div class="cell">
+							Post Test
+						</div>
+						<div class="cell">
+							Skill
+						</div>
+					</div>
+					
+					<div class="rows">
+						<div class="cell" data-title="Practician-Id">
+							1301190000
+						</div>
+						<div class="cell" data-title="Assistant-Name">
+							Dicky Hidayat
+						</div>
+						<div class="cell" data-title="Pre-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Journal">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Post-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Skill">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+					</div>
+
+					<div class="rows">
+						<div class="cell" data-title="Practician-Id">
+							1301190001
+						</div>
+						<div class="cell" data-title="Assistant-Name">
+							Irsyad
+						</div>
+						<div class="cell" data-title="Pre-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Journal">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Post-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Skill">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+					</div>
+
+					<div class="rows">
+						<div class="cell" data-title="Practician-Id">
+							1301190002
+						</div>
+						<div class="cell" data-title="Assistant-Name">
+							Rifki
+						</div>
+						<div class="cell" data-title="Pre-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Journal">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Post-Test">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+						<div class="cell" data-title="Skill">
+							<input type="text" style="margin-left:23px;width: 25px;height:25px;border:1px solid black;">
+						</div>
+					</div>
+				</div>
+			</div>
+			<button style="
+			position: absolute;
+			width: 140px;
+			height: 50px;
+			left: 880px;
+			top: 650px;
+			font-family: calibri;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 24px;
+			line-height: 34px;
+			text-align: center;
+			border: 1px solid #333;
+            border-radius: 5px" class="btn-success">Submit</button>
+		</div>
+
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

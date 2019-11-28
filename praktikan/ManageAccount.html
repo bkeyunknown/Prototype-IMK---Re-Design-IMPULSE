@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Acount Manager</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+
+    <style>
+        body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+            width: 400px;
+            height: 70px;
+            background-color: #9DC3E6;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 20px;
+            background-color: #8CAADC;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 70px;
+            font-size: 35px;
+            float: right;
+            background-color: #8CAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        .in{
+            display: inline-block;
+        }
+        #btnUpdate{
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            align-items: center;
+        }
+        #btnUpdatePass{
+            background-color: yellow;
+            width: 130px;
+            height: 30px;
+            border: none;
+            border-radius: 7px;
+            color: black;
+            align-items: center;
+        }
+        #myModal{
+           width: 400px;
+           height: 300px;
+           position: fixed;
+           top: 50%;
+           left: 50%;
+           margin-top: -150px;
+           margin-left: -240px;
+       }
+
+       .loading {
+            -webkit-animation: rotation 2s infinite linear;
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="Home_Praktikan.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1" class="in">
+                </div>
+                <div id="header2" class="in">
+                    <p style="color: white;float: right;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <a href="ManageAccount.html"><img class="loading" style="width: 40px;" src="logo/setting.jpg" alt=""></a>
+                    <strong><a href="../Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+            
+        </div>
+        <div style="padding-top: 30px;font-size: 60px;">
+            <center><strong>Edit Profile</strong></center>
+        </div>
+        <div style="margin-left: 470px;padding-top: 40px;">
+            <form action="">
+                    Nama
+                    <input style="margin-left: 200px; width: 350px;" type="text" name="" id="" placeholder="Dicky Hidayat" readonly><br><br>
+                    TTL
+                    <input style="margin-left: 214px; width: 350px;" type="date" name="" id=""><br><br>
+                    No. Telp
+                    <input style="margin-left: 185px; width: 350px;" type="text" name="" id=""><br><br>
+                    Email
+                    <input style="margin-left: 202px; width: 350px;" type="text" name="" id=""><br><br>
+                    Pertanyaan Keamanan
+                    <input style="margin-left: 92px; width: 350px;" type="text" name="" id=""><br><br>
+                    Jawaban
+                    <input style="margin-left: 182px; width: 350px;" type="text" name="" id=""><br><br>
+                    <button onclick="sesuatu()" type="button" style="margin-top: 5px; background-color: #007BFF;margin-left: 250px;" id="btnUpdate">Update Profile</button>
+            </form>
+            <br>
+            
+            <button style="margin-top: 5px; margin-left: 260px;font-size: 15px;" id="btnUpdatePass" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+                    Edit Password
+                  </button>
+                
+                  <!-- The Modal -->
+                  <div class="modal fade" id="myModal" style="height: 500px;">
+                    <div class="modal-dialog">
+                      <div class="modal-content" style="background-color: #9DC3E6;">
+                      
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                          <h4 class="modal-title">Edit Password</h4>
+                          <button type="button" class="close" data-dismiss="modal">×</button>
+                        </div>
+                        
+                        <!-- Modal body -->
+                        <div class="modal-body">
+                          <form action="">
+                            Old Password
+                            <input style="margin-left: 70px;margin-bottom: 10px;" type="password" name="" id="old" required><br>
+                            New Password
+                            <input style="margin-left: 63.5px;margin-bottom: 10px;" type="password" name="" id="new" required><br>
+                            Re-Enter Password
+                            <input style="margin-left: 35px;margin-bottom: 20px;" type="password" name="" id="new2" required>
+                            <button onclick="sesuatu2()" type="button" class="btn btn-primary" data-dismiss="modal" style="float: right;">Update Password</button>
+                          </form>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+        </div>
+        <script>
+                
+                function sesuatu(){
+                    swal("", "Profile Updated", "success");
+    
+                }
+                function sesuatu2(){
+                    if (document.getElementById('old').value == 'asprak' && document.getElementById('new').value != '' && document.getElementById('new2').value != ''){
+                        if (document.getElementById('new').value == document.getElementById('new2').value){
+                            swal("", "Password Updated", "success");
+                        }
+                        else{
+                            swal("", "Input in Re-Enter New Password with the same value with New Password", "success");
+                        }
+                    }
+                    else if (document.getElementById('old').value != 'praktikan' ){
+                        swal("", "Old Password Incorect", "error");
+                    }
+                    else{
+                        swal("", "New Password Is Required", "error");
+                    }
+                }
+                
+                
+                
+                 
+            </script>
+
+
+</body>
+</html>

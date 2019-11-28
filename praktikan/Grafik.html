@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <link rel="shortcut icon" href="logo/logo_login2.png">
+  <title>Score</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="chartjs/Chart.js"></script>
+
+    <style>
+        #matkul {
+            border-radius: 25px;
+            background: #2E75B6;
+            padding: 20px; 
+            width: 150px;
+            height: 75px;
+            float: left;
+            margin: 20px;
+            color: white;
+              
+        }
+        .content{
+            margin: auto;
+            width: 60%;
+        }
+        body{
+            background-color: #9DC3E6;
+            font-family: calibri;
+        }
+        .grid {
+            width: 100%;
+            margin-right:160px;
+        }
+        #logo{
+            width: 400px;
+            height: 70px;
+            background-color: #9DC3E6;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 20px;
+            background-color: #8CAADC;
+        }
+        #header1{
+            width: 350px;
+            height: 70px;
+            float: left;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header2{
+            width: 400px;
+            height: 70px;
+            margin: 0;
+            padding-top: 10px;
+            padding-left: 40px;
+            font-size: 25px;
+        }
+        #header3{
+            width: 300px;
+            height: 70px;
+            margin: 0;
+            padding-top: 5px;
+            padding-left: 30px;
+            padding-right: 70px;
+            font-size: 35px;
+            float: right;
+            background-color: #8CAADC;
+        }
+        #header {
+            background-color: #2E75B6;
+            height: 70px;
+        }
+        .in{
+            display: inline-block;
+        }
+        #btnUpdate{
+            width: 150px;
+            height: 40px;
+            font-size: 20px;
+            border: none;
+            border-radius: 7px;
+            color: white;
+            align-items: center;
+        }
+        #btnUpdatePass{
+            background-color: yellow;
+            width: 130px;
+            height: 30px;
+            border: none;
+            border-radius: 7px;
+            color: black;
+            align-items: center;
+        }
+        #myModal{
+           
+           width: 400px;
+           height: 300px;
+           position: fixed;
+           top: 50%;
+           left: 50%;
+           margin-top: -150px;
+           margin-left: 0px;     
+       }
+       .btn{
+            background-color: #2E75B6; 
+            color: white; 
+            border: white; 
+            border-style: solid;
+            height: 30px;
+            font-size: 10px;
+            margin-top: -30px;
+
+       }
+
+       .loading {
+            -webkit-animation: rotation 2s infinite linear;
+        }
+
+        @-webkit-keyframes rotation {
+            from {
+                -webkit-transform: rotate(0deg);
+            }
+            to {
+                -webkit-transform: rotate(359deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+        <div  id="header">
+            <div class="grid">
+                <div id="logo" class="in">
+                    <a href="Home_Praktikan.html">
+                        <img src="logo/logo_admin.png" alt="">
+                    </a>
+                </div>
+                <div id="header1" class="in">
+                </div>
+                <div id="header2" class="in">
+                    <p style="color: white;float: right;">Welcome, Dicky Hidayat</p>
+                </div>
+                <div class="in" id="header3">
+                    <a href="ManageAccount.html"><img class="loading" style="width: 40px;" src="logo/setting.jpg" alt=""></a>
+                    <strong><a href="../Login.html" style="float: right;text-decoration: none;color: black;">Logout</a></strong>
+                </div>
+            </div>
+        </div>
+        <div class="" style="margin-left: 150px; height: 300px;margin-top: 0;">
+            <br>
+            <a href=""><button type="button" class="btn" >Matkul A</button></a> 
+            <a href=""><button type="button" class="btn" >Matkul B</button></a>
+            <div style="width: 1250px;height: 400px;margin-top: -20px;">
+                <canvas id="myChart"></canvas>
+            </div>
+         
+         
+            <script>
+                var ctx = document.getElementById("myChart").getContext('2d');
+                var myChart = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Modul 1", "Modul 2", "Modul 3", "Modul 4", "Modul 5", "Modul 6"],
+                        datasets: [{
+                            label: 'Matkul A',
+                            data: [85, 80, 97, 75, 90, 93],
+                            backgroundColor: [
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)'
+                            ],
+                            borderColor: [
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)',
+                            'rgb(46, 117, 182)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    beginAtZero:true
+                                }
+                            }]
+                        }
+                    }
+                });
+            </script>
+        </div>      
+</body>
+</html>
